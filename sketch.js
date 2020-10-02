@@ -33,5 +33,6 @@ function draw() {
 }
 
 function mousePressed(){
-    window.open("https://instagram.com/clear_skies42?igshid=3r0bobxrzoxt", "_self");
+
+    window.open("https://instagram.com/clear_skies42", "_self");
 }
