@@ -3,7 +3,10 @@ let SS_Duck;
 
 
 function preload() {
-    bg = loadImage('background.jpeg');
+    bg = loadImage('assets/background.jpeg');
+    for (let i = 0; i < 17; i++) {
+        append(SS_Duck, loadImage('assets/duck_sheet/tile'+i+'.png'))
+    }
     //SS_Duck = loadSpriteSheet('duck_sheet.png',798/6,527/4,24);
 
 }
