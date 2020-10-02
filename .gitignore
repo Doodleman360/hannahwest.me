@@ -7,6 +7,10 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/**/codeStyleConfig.xml
+.idea/**/HannahWest.iml
+.idea/**/modules.xml
+.idea/**/vcs.xml
 
 # Generated files
 .idea/**/contentModel.xml
