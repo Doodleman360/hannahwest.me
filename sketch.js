@@ -20,10 +20,15 @@ function setup() {
 
 var index = 4;
 var time = 0;
+var xduck = 0;
 function draw() {
     time += deltaTime
     image(bg, displayWidth/2, displayHeight/2, displayWidth, displayHeight);
-    image(SS_Duck[index],mouseX,mouseY)
+    xduck = xduck + 1 * (deltaTime / 50);
+    if(xduck > width) {
+        xduck = 0;
+    }
+    image(SS_Duck[index],xduck,displayHeight-(SS_Duck[index].height/2));
     if(time > 200) {
         time = 0;
         if (++index > 7) {
