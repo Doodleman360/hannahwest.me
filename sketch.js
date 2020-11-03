@@ -8,9 +8,6 @@ function preload() {
     for (let i = 0; i < 19; i++) {
         SS_Duck[i] = loadImage('assets/duck_sheet/tile0'+i+'.png');
     }
-    potato = loadImage('assets/potato_no_mouth.PNG')
-    mouth = loadImage('assets/potato_mouth.PNG')
-    //SS_Duck = loadSpriteSheet('duck_sheet.png',798/6,527/4,24);
 
 }
 
