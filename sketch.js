@@ -1,4 +1,4 @@
-let bg, cnv;
+let bg;
 let SS_Duck = [];
 let potato, mouth;
 
@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-    cnv = createCanvas(displayWidth, displayHeight);
+    createCanvas(displayWidth, displayHeight);
     background(220);
     image(bg, 0, 0, displayWidth, displayHeight);
     imageMode(CENTER);
@@ -25,22 +25,24 @@ let off = 0.0;
 function draw() {
     time += deltaTime
     image(bg, displayWidth/2, displayHeight/2, displayWidth, displayHeight);
-
     //off = off + 0.05;
-    //image(potato, width/2, height/2);
-    //image(mouth, width/2, height/2+(noise(off)*30));
 
-    xduck = xduck + (deltaTime / 50);
+    xduck = xduck + 1  * (deltaTime / 50);
+    //print(displayHeight)
     if(xduck > width) {
         xduck = 0;
     }
-    image(SS_Duck[index],xduck,displayHeight-(SS_Duck[index].height/2));
+    image(SS_Duck[index],xduck,windowHeight-(SS_Duck[index].height/2-10));
     if(time > 200) {
         time = 0;
         if (++index > 7) {
             index = 4;
         }
     }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }
 
 function mousePressed(){
