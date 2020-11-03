@@ -1,5 +1,6 @@
 let bg, cnv;
-var SS_Duck = [];
+let SS_Duck = [];
+let potato, mouth;
 
 
 function preload() {
@@ -7,6 +8,8 @@ function preload() {
     for (let i = 0; i < 19; i++) {
         SS_Duck[i] = loadImage('assets/duck_sheet/tile0'+i+'.png');
     }
+    potato = loadImage('assets/potato_no_mouth.PNG')
+    mouth = loadImage('assets/potato_mouth.PNG')
     //SS_Duck = loadSpriteSheet('duck_sheet.png',798/6,527/4,24);
 
 }
@@ -18,13 +21,19 @@ function setup() {
     imageMode(CENTER);
 }
 
-var index = 4;
-var time = 0;
-var xduck = 0;
+let index = 4;
+let time = 0;
+let xduck = 0;
+let off = 0.0;
 function draw() {
     time += deltaTime
     image(bg, displayWidth/2, displayHeight/2, displayWidth, displayHeight);
-    xduck = xduck + 1 * (deltaTime / 50);
+
+    //off = off + 0.05;
+    //image(potato, width/2, height/2);
+    //image(mouth, width/2, height/2+(noise(off)*30));
+
+    xduck = xduck + (deltaTime / 50);
     if(xduck > width) {
         xduck = 0;
     }
